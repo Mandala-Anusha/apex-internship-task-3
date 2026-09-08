@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e4f7f2,
+            white
+        );
+
+    padding: 30px 15px;
+
+    color: #173b3b;
+}
+
+
+.container {
+    max-width: 700px;
+
+    margin: auto;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 25px rgba(0,0,0,0.1);
+}
+
+
+h1 {
+    text-align: center;
+
+    color: #16756d;
+
+    margin-bottom: 25px;
+}
+
+
+/* Input */
+
+.input-area {
+    display: flex;
+
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+
+    padding: 13px;
+
+    border: 1px solid #ccd9d7;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 15px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #16756d;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+
+/* Filters */
+
+.filters {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin: 20px 0;
+}
+
+.filter {
+    background-color: #e7efed;
+
+    color: #173b3b;
+}
+
+.filter.active {
+    background-color: #16756d;
+
+    color: white;
+}
+
+
+/* Tasks */
+
+#taskList {
+    list-style: none;
+}
+
+.task {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+.task span {
+    flex: 1;
+}
+
+.task.completed span {
+    text-decoration: line-through;
+
+    opacity: 0.5;
+}
+
+
+.edit,
+.delete {
+    padding: 7px 10px;
+
+    background-color: #173b3b;
+}
+
+
+#emptyMessage {
+    text-align: center;
+
+    color: #777;
+
+    margin-top: 20px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 550px) {
+
+    .input-area {
+        flex-direction: column;
+    }
+
+    .task {
+        flex-wrap: wrap;
+    }
+
+}

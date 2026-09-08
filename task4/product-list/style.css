@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #f5f8f7;
+
+    color: #173b3b;
+}
+
+
+/* Header */
+
+header {
+    text-align: center;
+
+    padding: 45px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dff4ef,
+            white
+        );
+}
+
+header h1 {
+    color: #16756d;
+
+    margin-bottom: 8px;
+}
+
+
+/* Container */
+
+.container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 30px 20px;
+}
+
+
+/* Controls */
+
+.controls {
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr 1fr;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+
+input,
+select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccd9d7;
+
+    border-radius: 8px;
+
+    background-color: white;
+
+    font-size: 15px;
+}
+
+
+/* Result */
+
+#resultCount {
+    margin-bottom: 15px;
+
+    font-weight: bold;
+}
+
+
+/* Product Grid */
+
+.products {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+/* Product Card */
+
+.product {
+    background-color: white;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Product Icon */
+
+.icon {
+    height: 110px;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 55px;
+
+    background-color: #eaf5f2;
+
+    border-radius: 10px;
+
+    margin-bottom: 15px;
+}
+
+
+.product h3 {
+    color: #16756d;
+
+    margin-bottom: 8px;
+}
+
+
+.category {
+    font-size: 13px;
+
+    color: #777;
+
+    text-transform: capitalize;
+}
+
+
+.price {
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin: 8px 0;
+}
+
+
+.rating {
+    color: #b66a00;
+}
+
+
+/* No results */
+
+.no-results {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding: 50px;
+}
+
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .products {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .controls {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 550px) {
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .controls {
+        grid-template-columns: 1fr;
+    }
+
+}
